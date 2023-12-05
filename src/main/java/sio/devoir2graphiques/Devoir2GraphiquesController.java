@@ -108,6 +108,15 @@ public class Devoir2GraphiquesController implements Initializable
             apGraph2.toFront();
 
             // A vous de jouer
+
+
+        }
+        else
+        {
+            lblTitre.setText("Devoir : Graphique n°3");
+            apGraph3.toFront();
+
+            // A vous de jouer
             try {
                 maCnx = new ConnexionBDD();
                 graphiqueController = new GraphiqueController();
@@ -127,14 +136,6 @@ public class Devoir2GraphiquesController implements Initializable
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
-
-        }
-        else
-        {
-            lblTitre.setText("Devoir : Graphique n°3");
-            apGraph3.toFront();
-
-            // A vous de jouer
 
         }
     }
