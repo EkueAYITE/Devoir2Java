@@ -88,6 +88,7 @@ public class Devoir2GraphiquesController implements Initializable
                 graphiqueController = new GraphiqueController();
                 datasGraphiqueMap1 = graphiqueController.GetDataGraphique1();
                 Set<Integer> ages = datasGraphiqueMap1.keySet();
+                this.serieGraph1 = new XYChart.Series<>();
                 for (Integer age : ages) {
                     serieGraph1.getData().add(new XYChart.Data(age, datasGraphiqueMap1.get(age)));
                 }
@@ -114,6 +115,7 @@ public class Devoir2GraphiquesController implements Initializable
                 ObservableList<PieChart.Data> observableListDataGraph2 = FXCollections.observableArrayList();
                 datasGraphiqueMap2 = graphiqueController.GetDataGraphique2();
                 Set<String> sexes = datasGraphiqueMap2.keySet();
+
                 for (String sexe : sexes) {
                     observableListDataGraph2.add(new PieChart.Data(sexe, datasGraphiqueMap2.get(sexe)));
                 }
